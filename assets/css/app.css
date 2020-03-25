@@ -1,3 +1,15 @@
-body {
-    background-color: rgb(255, 255, 255);
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    background-color: rgb(138, 137, 146);
+}
+
+.navbar {
+    background-color: transparent;
+}
+
