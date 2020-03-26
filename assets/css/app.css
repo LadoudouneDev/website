@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Ranchers|Gruppo|Handlee&display=swap" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Ranchers");
+@import url("https://fonts.googleapis.com/css?family=Gruppo");
+@import url("https://fonts.googleapis.com/css?family=Handlee");
+
 
 * {
     box-sizing: border-box;
@@ -13,18 +17,37 @@ body, html {
 }
 
 .navbar {
-    background-color: transparent;  
+    background-color: rgb(240, 238, 238);  
     box-shadow: 0px 2px 25px rgb(177, 177, 177);
 }
 
+#nav-link {
+    color: rgb(5, 4, 34);
+    margin-right: 15px;
+}
+
+#navbarSupportedContent {
+    font-family:  'Handlee';
+    font-size: 1.6vh;
+
+}
+
+#nav-link:hover {
+    color: rgb(0, 140, 255); 
+    transform: rotate(3deg) scale(1.1) skew(3deg) translate(4px,-1px);
+    -webkit-transform: rotate(3deg) scale(1.1) skew(3deg) translate(4px,-1px);
+    -moz-transform: rotate(3deg) scale(1.1) skew(3deg) translate(4px,-1px);
+    transition-duration: 0.1s;
+    font-size: 2.2vh;
+}
 
 #footer {
     background-color: rgb(24, 22, 22);
     color: rgb(180, 178, 178);
 }
 
-#logotitre{
-    font: 3vh 'Ranchers';
+#logotitre {
+    font: 3.5vh/1 'Ranchers';
     text-shadow:  
     #797575 0.006em 0.006em 0.007em,
     #797575 1px 1px 1px,
@@ -34,10 +57,7 @@ body, html {
     rgba(16, 16, 16, 0.2) 1px 22px 10px,
     rgb(24, 22, 22) -0.10em -0.1em 100px;
     color:#04072e;
-}
-
-#navbarSupportedContent{
-    font-family: 'Gruppo';
+    margin-left: 40px;
 }
 
 #logoImage{
@@ -52,6 +72,8 @@ body, html {
     box-shadow: 0px 12px 15px rgb(177, 177, 177);
     position: relative;
     border-radius: 8px;
+    background-image: -webkit-linear-gradient(top, #edecec, #cecbc9);
+	background-image: linear-gradient(top, #edecec, #cecbc9);
 }
 
 #formConnexion {
@@ -66,3 +88,5 @@ body, html {
 #cardconnect {
     border:none;
 }
+
+

@@ -13,12 +13,12 @@
 
                     {% if app.user %}
                         <div class="mb-3">
-                        {{ app.user.username }}, t'es déjà connecté(e) !<a href="{{ path('app_logout') }}"><br>
+                        {{ app.user.username }}, vous êtes déja connecté(e) !<a href="{{ path('app_logout') }}"><br>
                         Se déconnecter</a>
                         </div>
                     {% endif %}
 
-                    <h1 class="h3 mb-3 font-weight-normal">Faut bien réfléchir avant de mettre n'importe quoi sur notre site !!!</h1>
+                    <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
                     <label for="inputIdentifiant">Identifiant</label>
                     <input type="text" value="{{ last_username }}" name="identifiant" id="inputIdentifiant" class="form-control" required autofocus>
                     <label for="inputPassword">Mot de passe</label>
