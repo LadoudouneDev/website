@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+{% block title %}Les articles{% endblock %}
 
 {% block article %}
-    <h1>Article index</h1>
+    <h1>Les articles</h1>
 
     <table class="table">
         <thead>
@@ -27,13 +27,13 @@
                 <td>{{ article.dateParution ? article.dateParution|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ article.publie ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('article_show', {'id': article.id}) }}">Voir</a>
+                    <a href="{{ path('article_edit', {'id': article.id}) }}">Éditer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="7">no records found</td>
+                <td colspan="7">Désolé, je n'ai pas trouvé l'article</td>
             </tr>
         {% endfor %}
         </tbody>
