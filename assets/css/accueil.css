@@ -6,7 +6,7 @@ body.sticky-header {
 }
 
 body.sticky-header header {
-    height: 50px;
+    height: 60px;
     background-color: transparent;
     text-align: right;
 }
@@ -19,7 +19,12 @@ body.sticky-header header h1 {
 }
 
 body.sticky-header h3 {
-  color: chartreuse;
+  visibility: visible;
+  margin: 1%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 2.5vh;
 }
 
 header {
@@ -38,37 +43,49 @@ header {
 }
 
 header h1 {
-    font-family: 'Chango';
-    font-size: 10vh;
-    margin-top: 2%;
-    /* text-align: center; */
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  font: 3.5vh/1 'Chango';
+  text-shadow:  
+  #797575 0.006em 0.006em 0.007em,
+  #797575 1px 1px 1px,
+  #797575 1px 2px 1px,
+  #797575 1px 3px 1px,
+  rgba(16, 16, 16, 0.4) 1px 18px 6px,
+  rgba(16, 16, 16, 0.2) 1px 22px 10px,
+  rgb(24, 22, 22) -0.10em -0.1em 100px;
+  color:#04072e;
+  font-size: 11vh;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header h3 {
+  visibility: hidden;
 }
 
 header nav {
     position: absolute;
     bottom: 0;
-    height: 60px;
-    line-height: 60px;
+    height: 90px;
+    line-height: 70px;
     width: 100%;
     background-color: transparent;
 }
 
 header nav a {
-    font-family: 'Chango';
+    font-family: 'Ranchers';
     color: rgb(139, 7, 7);
     display: inline-block;
     padding: 10px 15px;
+    margin: 25px;
     line-height: 1;
     text-decoration: none;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     text-align: left;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 header nav a:hover {
