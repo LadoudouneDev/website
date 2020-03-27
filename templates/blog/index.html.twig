@@ -8,8 +8,8 @@
 
         <div class="container">
             <div class="row blog">
-                <div class="col-10">
-                    <div class="row article">
+                <div class="col-8 thecards">
+                    {# <div class="row article">
                         <div class="col-4 article_img">
                             <img class="image_article" src={{ asset("images/blog/") ~ article.image }}>
                         </div>
@@ -19,9 +19,43 @@
                             <p>{{ article.contenu }}</p>
                             <p class="article_lien"><a href="#">Qu'est-ce-que tu en penses ?</a></p>
                         </div>
+                    </div> #}
+                    <div class="thumbnail">
+                        <img class="left" src={{ asset("images/blog/") ~ article.image }}>
+                    </div>
+
+                    <div class="right">
+                        <h1>{{ article.titre }}</h1>
+                        <div class="separator"></div>
+                        <p>{{ article.contenu }}</p>                        
+                    </div>
+
+                                         
+                            <h5>12</h5>
+                            <h6>JANUARY</h6>
+                        
+                            <div class="tagbox">
+                                <span class="tag">Histoire</span>   
+                            </div>
+                       
+                   
+                    {# <ul>
+                        <li><i class="fa fa-eye fa-2x"></i></li>
+                        <li><i class="fa fa-heart-o fa-2x"></i></li>
+                        <li><i class="fa fa-envelope-o fa-2x"></i></li>
+                        <li><i class="fa fa-share-alt fa-2x"></i></li>
+                    </ul> #}
+
+                    <div class="fab"><i class="fa fa-arrow-down fa-3x"> </i></div>
+
+                </div>
+            
+                
+                <div class="col-2">
+                    <div class="bienvenue">
+                        Bienvenue dans Le Blog By Ladoudoune !
                     </div>
                 </div>
-                <div class="col-2">col-2</div>
             </div>
         </div>
 
