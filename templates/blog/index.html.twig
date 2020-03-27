@@ -3,5 +3,32 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block blog %}
-    {{ dump(articles)}}
+    {% for article in articles %}
+    {# {{ dump(article)}} #}
+
+        <div class="container">
+            <div class="row blog">
+                <div class="col-10">
+                    <div class="row article">
+                        <div class="col-4 article_img">
+                            <img class="image_article" src={{ asset("images/blog/") ~ article.image }}>
+                        </div>
+                        <div class="col-8 article_txt">
+                            <h1>{{ article.titre }}</h1>
+                            <div class="article_bar"></div>
+                            <p>{{ article.contenu }}</p>
+                            <p class="article_lien"><a href="#">Qu'est-ce-que tu en penses ?</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">col-2</div>
+            </div>
+        </div>
+
+    {% else %}
+            
+            <p>Désolé, je n'ai pas trouvé l'article</p>
+            
+    {% endfor %}
+
 {% endblock %}
