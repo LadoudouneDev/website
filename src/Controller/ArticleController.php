@@ -32,14 +32,17 @@ class ArticleController extends AbstractController
     {
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
+        
         $form->handleRequest($request);
+        var_dump($form->get('image')->getData());
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // $whichCp = $form->get('action_cpCode')->getData();
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($article);
-            $entityManager->flush();
+            // $entityManager->persist($article);
+            // $entityManager->flush();
 
-            return $this->redirectToRoute('article_index');
+            // return $this->redirectToRoute('article_index');
         }
 
         return $this->render('article/new.html.twig', [

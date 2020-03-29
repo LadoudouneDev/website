@@ -1,4 +1,6 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    {# {{ form_widget(form) }} #}
+     {{ form_row(form.fkCategorie) }}
+  <a href="#" id="add_category" class="btn btn-default">Ajouter une catégorie</a>
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
