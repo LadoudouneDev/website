@@ -53,7 +53,7 @@ header h1 {
   rgba(16, 16, 16, 0.2) 1px 22px 10px,
   rgb(24, 22, 22) -0.10em -0.1em 100px;
   color:#04072e;
-  font-size: 11vh;
+  font-size: 12vh;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -74,18 +74,18 @@ header nav {
 }
 
 header nav a {
-    font-family: 'Ranchers';
-    color: rgb(139, 7, 7);
+    font-family: 'Chango';
+    color: rgb(34, 33, 39);
     display: inline-block;
-    padding: 10px 15px;
-    margin: 25px;
+    /* padding: 10px 15px; */
+    margin-right: 1.5%;
     line-height: 1;
     text-decoration: none;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     text-align: left;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 header nav a:hover {

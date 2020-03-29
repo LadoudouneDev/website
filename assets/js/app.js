@@ -9,6 +9,7 @@
 import '../css/app.css';
 import '../css/blog.css';
 import '../css/accueil.css';
+import '../css/contact.css';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
@@ -16,6 +17,9 @@ import '../css/accueil.css';
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 
 
+////////////////////////////////////////////////////////////////////////////////
+// FONCTION POUR LA NAVBAR DE LA PAGE D'ACCUEIL :
+////////////////////////////////////////////////////////////////////////////////
 
 $(function(){
     $(window).scroll(function(){
@@ -28,4 +32,7 @@ $(function(){
         }
     });
 });
+
+
+/////////////////////////////////////////////////////////////////////////////
 
