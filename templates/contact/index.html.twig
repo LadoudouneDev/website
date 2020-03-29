@@ -2,6 +2,14 @@
 
 {% block title %}Nous contacter{% endblock %}
 
+{% block stylesheets %}
+
+	{{ parent() }}
+	{{ encore_entry_link_tags ( 'contact' ) }}
+        
+{% endblock %}
+
+
 {% block contact %}
 
 	<div>
@@ -63,3 +71,9 @@
 	
 {% endblock contact %}
 
+{% block javascripts %}
+
+    {{ parent() }}       
+    {{ encore_entry_script_tags ( 'contact' ) }}
+
+{% endblock %}

@@ -2,6 +2,13 @@
 
 {% block title %}Hello BlogController!{% endblock %}
 
+{% block stylesheets %}
+
+	{{ parent() }}
+	{{ encore_entry_link_tags ( 'blog' ) }}
+        
+{% endblock %}
+
 {% block blog %}
 {# <div id="overlay"></div> #}
 
@@ -41,5 +48,12 @@
     {% endfor %}
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}       
+    {{ encore_entry_script_tags ( 'blog' ) }}
 
 {% endblock %}
