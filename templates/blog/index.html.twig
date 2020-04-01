@@ -11,7 +11,7 @@
 
 {% block blog %}
 {# <div id="overlay"></div> #}
-
+{# {{ dump(categories)}} #}
 <div class="container">
 
     <div class="headblog">
@@ -20,6 +20,9 @@
         </div>
         <div class="lestags">
             <div class="bandeautags">
+            {% for categorie in categories %}
+                <div class="tags">{{ categorie.nom }}</div>
+            {% endfor %}   
             </div>
         </div>
     </div>
