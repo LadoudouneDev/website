@@ -15,12 +15,17 @@ body {
     padding-top: 13vh;
     padding-bottom: 2vh;
     letter-spacing: 2px;
-    font: 12vh 'Lobster';
+    font: 13vh 'Lobster';
+    text-shadow: -3px -3px 1px rgb(59, 59, 59), 2px 2px 1px #353535;
 }
 
 #creerArticle {
     margin-left: 8vw;
     font: 3vh 'Lobster';
+}
+
+#creerArticle:hover {
+    color: tomato;
 }
 
 .table-responsive {
