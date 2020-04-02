@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block stylesheets %}
+
+	{{ parent() }}
+	{{ encore_entry_link_tags ( 'blog' ) }}
+        
+{% endblock %}
+
+{% block blog %}
+{# <div id="overlay"></div> #}
+{# {{ dump(categories)}} #}
+<div class="container">
+
+    <div class="headblog">
+        <div class="titreblog">
+            <h1>Le saviez-vous ?</h1>
+        </div>
+        <div class="lestags">
+            <div class="bandeautags">
+            {% for categorie in categories %}
+                <div class="tags">{{ categorie.nom }}</div>
+            {% endfor %}   
+            </div>
+        </div>
+    </div>
+
+    <div class="row blog">
+
+    {% for article in articles %}
+    {# {{ dump(article)}} #}
+        
+                <div class="col-4 colcard">
+                    <div class="card" style="width: 100%;">
+                        <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.titre }}</h5>
+                            <p class="card-text scroll">{{ article.contenu }}</p>
+                        </div>
+                    </div>
+                </div>
+            
+        
+
+    {% else %}
+            
+            <p>Désolé, je n'ai pas trouvé l'article</p>
+            
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}       
+    {{ encore_entry_script_tags ( 'blog' ) }}
+
+{% endblock %}
