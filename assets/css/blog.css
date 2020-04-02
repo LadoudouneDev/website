@@ -50,4 +50,12 @@ h1{
 h5{
   font-family: 'Lobster';
 }
-
+.tags{
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: small;
+  border: solid 0.3px rgb(189, 189, 189);
+  padding: 5px;
+  /* border-radius: 10px; */
+}

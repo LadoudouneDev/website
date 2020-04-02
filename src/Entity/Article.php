@@ -145,7 +145,6 @@ class Article
     }
     public function __toString()
     {
-        // to show the id of the teacher in the input
         return (string) $this->id;
     }
 }
