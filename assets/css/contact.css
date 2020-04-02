@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
 #titreContact {
   text-align: center;
   color: rgb(0, 0, 0);
@@ -12,7 +15,8 @@
   text-align: center;
   position: relative;
   width: 100%;
-  padding-inline: 10vw;
+  padding-right: 12vw;
+  padding-left: 10vw;
 }
 
 .card {
@@ -29,19 +33,40 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform: perspective(1000px) rotateX(70deg) rotateY(4deg) rotateZ(-40deg);
+  -moz-transform-origin: center center -130px;
+  -moz-transition: all 0.5s ease-out;
+  -moz-animation-name: animate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform: perspective(1000px) rotateX(70deg) rotateY(4deg) rotateZ(-40deg);
+  -webkit-transform-origin: center center -120px;
+  -webkit-transition: all 0.5s ease-out;
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform: perspective(1000px) rotateX(70deg) rotateY(4deg) rotateZ(-40deg);
+  -o-transform-origin: center center -130px;
+  -o-transition: all 0.5s ease-out;
+  -o-animation-name: animate;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+  -o-transform: perspective(1000px) rotateX(70deg) rotateY(4deg) rotateZ(-40deg);
 }
 
 .card:hover {
   cursor: pointer;
   animation: unset;
-  margin-top: -6vh;
-  transform: perspective(1000px) rotateX(15deg) rotateY(-3deg) rotateZ(0deg);
+  margin-top: -7vh;
   z-index: 100;
-  box-shadow: 70px 25px 30px #555 ;
+  box-shadow: 60px 25px 55px #555 ;
   border-style: solid;
   border-color: rgb(193, 193, 195);
   border-width: 2px;
-  /* box-shadow: 0px 15px 100px rgb(96, 96, 97); */
+  transform: perspective(1000px) rotateX(15deg) rotateY(-3deg) rotateZ(0deg);
+  -moz-transform: perspective(1000px) rotateX(15deg) rotateY(-3deg) rotateZ(0deg);
+  -webkit-transform: perspective(1000px) rotateX(15deg) rotateY(-3deg) rotateZ(0deg);
+  -o-transform: perspective(1000px) rotateX(15deg) rotateY(-3deg) rotateZ(0deg);
+
 }
 
 img {
@@ -69,6 +94,7 @@ img {
 p {
   text-align: center;
   color: black;
+  font-size: 2.2vh;
   font-family: 'Lobster';
 }
 
