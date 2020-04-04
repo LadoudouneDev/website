@@ -15,6 +15,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\HttpFoundation\File\File;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
+
 
 
 class ArticleType extends AbstractType
@@ -37,7 +39,7 @@ class ArticleType extends AbstractType
             ->add('image', null, [
                 'required'   => false,])
             ->add('titre')
-            ->add('contenu', TextareaType::class)
+            ->add('contenu', CKEditorType::class)
             ->add('date_parution')
             // ,DateType::class, [
             //     'widget' => 'single_text',
