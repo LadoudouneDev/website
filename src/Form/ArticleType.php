@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\HttpFoundation\File\File;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
@@ -43,7 +44,15 @@ class ArticleType extends AbstractType
                 'required'   => false,])
             ->add('titre')
             ->add('contenu', CKEditorType::class)
-            ->add('date_parution')
+            ->add('date_parution', DateTimeType::class, [
+                'widget' => 'single_text',
+                'html5' => false,
+                'format' => 'dd-MM-yyyy HH:mm',
+                //'empty_data' => new \DateTime('now'),
+                //'attr' => ['class' => 'js-datepicker'],
+                // 'attr' => [
+                //     'placeholder' =>  new \DateTime('now'),],
+            ])
             // ,DateType::class, [
             //     'widget' => 'single_text',
                 // 'html5' => false,

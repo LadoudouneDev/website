@@ -1,3 +1,4 @@
+@import '~js-datepicker/dist/datepicker.min.css';
 /* html, body{
   overflow: auto;
 } */
@@ -60,4 +61,51 @@ h5{
   padding: 5px;
   /* border-radius: 10px; */
   cursor: pointer;
+}
+
+
+
+.details,
+.details ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.details a {
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+.details ul li {
+  display: inline-block;
+}
+
+.details .date:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "\f133";
+}
+.details .tags ul:before {
+  font-family: FontAwesome;
+  content: "\f02b";
+  margin-right: 10px;
+}
+.details .tags li {
+  margin-right: 2px;
+}
+.details .tags li:first-child {
+  margin-left: -4px;
 }

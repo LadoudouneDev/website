@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Par catégorie{% endblock %}
 
 {% block stylesheets %}
 
@@ -10,45 +10,23 @@
 {% endblock %}
 
 {% block blog %}
-{# <div id="overlay"></div> #}
-{# {{ dump(categories)}} #}
+
 <div class="container">
 
     <div class="headblog">
         <div class="titreblog">
             <h1>Le saviez-vous ?</h1>
         </div>
-        <div class="lestags">
-            <div class="bandeautags">
-            {% for categorie in categories %}
-                {# <input type="hidden" value={{ categorie.id }}> #}
-                <div class="tags" id={{ categorie.id }}>{{ categorie.nom }}</div>
-            {% endfor %}   
-            </div>
-        </div>
+        
     </div>
 
     <div class="row blog">
 
     {% for article in articles %}
-
-    
-            {# {{ dump(article) }} #}
+            
                 <div class="col-4 colcard">
                     <div class="card" style="width: 100%;">
                         <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">
-                        <ul class="details">
-                            {# <li class="author"><a href="#">John Doe</a></li> #}
-                            {# <li class="date">{{ article.dateParution }}</li> #}
-                            <li class="tagsArticle">
-                                <ul>
-                                    <li><a href="#">Learn</a></li>
-                                    <li><a href="#">Code</a></li>
-                                    <li><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                         <div class="card-body">
                             <h5 class="card-title">{{ article.titre }}</h5>
                             <div class="card-text scroll">

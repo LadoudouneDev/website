@@ -93,12 +93,12 @@ class CategorieController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/articles", name="categorie_articles", methods={"GET"})
+     * @Route("/{id}/articles", name="categorie_articles",options={"expose"=true}, methods={"GET"})
      */
     public function articles_par_categorie(Categorie $categorie): Response
     {
         return $this->render('blog/articles.html.twig', [
-            'categorie' => $categorie->getArticles(),
+            'articles' => $categorie->getArticles(),
         ]);
     }
 }
