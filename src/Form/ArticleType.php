@@ -37,6 +37,7 @@ class ArticleType extends AbstractType
                 // ],
             ])
             ->add('image', null, [
+                'label' => 'Ancienne image :',
                 'required'   => false,])
             ->add('titre')
             ->add('contenu', CKEditorType::class)

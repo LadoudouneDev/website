@@ -37,7 +37,9 @@
                         <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ article.titre }}</h5>
-                            <p class="card-text scroll">{{ article.contenu }}</p>
+                            <div class="card-text scroll">
+                            {{ article.contenu |raw }}
+                            </div>
                         </div>
                     </div>
                 </div>
