@@ -21,7 +21,8 @@
         <div class="lestags">
             <div class="bandeautags">
             {% for categorie in categories %}
-                <div class="tags">{{ categorie.nom }}</div>
+                {# <input type="hidden" value={{ categorie.id }}> #}
+                <div class="tags" id={{ categorie.id }}>{{ categorie.nom }}</div>
             {% endfor %}   
             </div>
         </div>
@@ -30,8 +31,7 @@
     <div class="row blog">
 
     {% for article in articles %}
-    {# {{ dump(article)}} #}
-        
+            
                 <div class="col-4 colcard">
                     <div class="card" style="width: 100%;">
                         <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-            
+            {# <div>{{ article.fkCategorie }}</diV> #}
         
 
     {% else %}

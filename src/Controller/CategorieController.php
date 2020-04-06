@@ -91,4 +91,14 @@ class CategorieController extends AbstractController
 
         return $this->redirectToRoute('categorie_index');
     }
+
+    /**
+     * @Route("/{id}/articles", name="categorie_articles", methods={"GET"})
+     */
+    public function articles_par_categorie(Categorie $categorie): Response
+    {
+        return $this->render('blog/articles.html.twig', [
+            'categorie' => $categorie->getArticles(),
+        ]);
+    }
 }

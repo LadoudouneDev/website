@@ -25,7 +25,7 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('newImage', FileType::class, [
-                'label' => 'Image : ',
+                'label' => 'Nouvelle image : ',
                 'required' => false,
                 'mapped' => false,
                 // 'constraints' => [
@@ -37,7 +37,9 @@ class ArticleType extends AbstractType
                 // ],
             ])
             ->add('image', null, [
-                'label' => 'Ancienne image :',
+                'label' => 'Image actuelle :',
+                'attr' => [
+                    'placeholder' =>  'Aucune'],
                 'required'   => false,])
             ->add('titre')
             ->add('contenu', CKEditorType::class)
@@ -62,7 +64,7 @@ class ArticleType extends AbstractType
             
                 // uses the User.username property as the visible option string
                 'choice_label' => 'nom',
-            
+                
                 // used to render a select box, check boxes or radios
                 'multiple' => true,
                 'expanded' => true,
