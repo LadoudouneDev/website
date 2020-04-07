@@ -55,7 +55,16 @@ class Categorie
      */
     public function getArticles(): Collection
     {
-        return $this->articles;
+        $lesarticles = $this->articles;
+
+        // foreach($lesarticles as $k => $v) {
+        //     dump($v->$this['date_parution'][0]);
+        //     $d[$k] = $v->$this.date_parution;
+        //  }
+        //  array_multisort($d, SORT_DESC, $lesarticles);
+        
+
+        return $lesarticles;
     }
 
     public function addArticle(Article $article): self

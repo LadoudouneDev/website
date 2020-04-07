@@ -17,13 +17,19 @@
         <div class="titreblog">
             <h1>Le saviez-vous ?</h1>
         </div>
-        
+        <div class="lestags">
+            <div class="bandeautags">
+            
+                <div><h6>{{ categorie }}</h6></div>
+            
+            </div>
+        </div>
     </div>
 
     <div class="row blog">
 
     {% for article in articles %}
-            
+            {# {{ dump(article.dateParution) }} #}
                 <div class="col-4 colcard">
                     <div class="card" style="width: 100%;">
                         <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">

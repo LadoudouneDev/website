@@ -160,4 +160,14 @@ class ArticleController extends AbstractController
         return $this->redirectToRoute('article_index');
         
     }
+
+    /**
+     * @Route("/{id}/fiche", name="article_fiche", options={"expose"=true}, methods={"GET"})
+     */
+    public function ficheArticle(Article $article): Response
+    {
+        return $this->render('blog/fiche.html.twig', [
+            'article' => $article,
+        ]);
+    }
 }
