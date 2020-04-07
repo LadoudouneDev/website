@@ -32,20 +32,16 @@
 
     {% for article in articles %}
 
-    
-            {# {{ dump(article) }} #}
                 <div class="col-4 colcard">
-                    <div class="card" style="width: 100%;">
+                    <div class="card" id={{ article.id }} style="width: 100%;">
                         <img src={{ asset("images/blog/") ~ article.image }} class="card-img-top" alt="...">
                         <ul class="details">
-                            {# <li class="author"><a href="#">John Doe</a></li> #}
-                            {# <li class="date">{{ article.dateParution }}</li> #}
+                            <li class="date">{{ article.dateParution|date('d-m-Y') }}</li>
                             <li class="tagsArticle">
                                 <ul>
-                                    <li><a href="#">Learn</a></li>
-                                    <li><a href="#">Code</a></li>
-                                    <li><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
+                                {% for categorie in article.fkCategorie %}
+                                    <li><a href="#">{{ categorie.nom }}</a></li>
+                                {% endfor %} 
                                 </ul>
                             </li>
                         </ul>

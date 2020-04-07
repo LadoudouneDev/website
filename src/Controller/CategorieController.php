@@ -99,6 +99,7 @@ class CategorieController extends AbstractController
     {
         return $this->render('blog/articles.html.twig', [
             'articles' => $categorie->getArticles(),
+            'categorie' => $categorie->getNom(),
         ]);
     }
 }

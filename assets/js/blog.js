@@ -13,12 +13,16 @@ $(document).ready(function()
     $(".tags").click(function(event)
     {
         var theid = this.id;
-        //var route = "{{ path('categorie_articles', {'id': '"+ theid +"'})|escape('js') }}";
-        //console.log(route);
-        //console.log(this.id); //Affiche maDiv
-        //theid.push(this.id);
-        //console.log(theid);
+    
         var url = Routing.generate('categorie_articles', {'id': theid});
+        $( location ).attr("href", url);
+    });
+
+    $(".card").click(function(event)
+    {
+        var theid = this.id;
+    console.log('ttttttttt');
+        var url = Routing.generate('article_fiche', {'id': theid});
         $( location ).attr("href", url);
     });
 });

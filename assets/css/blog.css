@@ -2,19 +2,26 @@
 /* html, body{
   overflow: auto;
 } */
+html{
+  overflow-y: scroll;
+}
 .headblog{
   position: relative;
-  top: 150px;
+  top: 100px;
 }
 h1{
   font-family: 'gruppo';
   font-weight: bolder;
 }
+.lestags{
+  margin-top: 50px;
+}
 .blog{
   /* border: 0.5px solid rgb(220, 220, 250); */
   position: relative;
-  top: 200px;
+  top: 150px;
   height: 400px;
+  
 }
 /* .col-4{
   border: 0.5px solid rgb(220, 220, 250);
@@ -36,8 +43,9 @@ h1{
   /* border-top-left-radius: 20px;
   border-top-right-radius: 20px; */
 }
-.card:hover {
+.card:hover, .tags:hover{
   transform: scale(1.1);
+  cursor: pointer;
 }
 .card-body p{
   line-height: 1.5;
@@ -74,20 +82,21 @@ h5{
 .details {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 245px;
   left: -100%;
   margin: auto;
   -webkit-transition: left 0.2s;
   transition: left 0.2s;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   font-size: 0.9rem;
 }
 .details a {
   -webkit-text-decoration: dotted underline;
           text-decoration: dotted underline;
+          color: white;
 }
 .details ul li {
   display: inline-block;
@@ -98,14 +107,20 @@ h5{
   margin-right: 10px;
   content: "\f133";
 }
-.details .tags ul:before {
+.details .tagsArticle ul:before {
   font-family: FontAwesome;
   content: "\f02b";
   margin-right: 10px;
 }
-.details .tags li {
+.details .tagsArticle li {
   margin-right: 2px;
 }
-.details .tags li:first-child {
+.details .tagsArticle li:first-child {
   margin-left: -4px;
+}
+.card:hover .details {
+  left: 0%;
+}
+.findepage{
+  height: 100px;
 }

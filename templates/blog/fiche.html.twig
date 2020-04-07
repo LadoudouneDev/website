@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche article{% endblock %}
+
+{% block stylesheets %}
+
+	{{ parent() }}
+	{{ encore_entry_link_tags ( 'blog' ) }}
+        
+{% endblock %}
+
+{% block blog %}
+
+<div class="container">
+    <div class="headblog">
+        <div class="titreblog">
+            <h1>Le saviez-vous ?</h1>
+        </div>
+        <div class="lestags">
+            <div class="bandeautags">
+                <div>
+                    <h6>{{ article.titre }}</h6>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="row blog">
+        <div class="col">
+            <img src={{ asset("images/blog/") ~ article.image }} class="img_fiche" alt="...">       
+            <div>{{ article.contenu |raw }}</div>             
+        </div>
+    </div>
+</div>
+
+<div class="findepage"></div>
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}       
+    {{ encore_entry_script_tags ( 'blog' ) }}
+
+{% endblock %}
