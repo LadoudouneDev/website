@@ -25,6 +25,7 @@ class Categorie
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Article", mappedBy="fkCategorie")
+     * @ORM\OrderBy({"date_parution" = "DESC", "id" = "DESC"})
      */
     private $articles;
 

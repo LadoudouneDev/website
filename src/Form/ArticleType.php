@@ -44,15 +44,16 @@ class ArticleType extends AbstractType
                 'required'   => false,])
             ->add('titre')
             ->add('contenu', CKEditorType::class)
-            ->add('date_parution', DateTimeType::class, [
-                'widget' => 'single_text',
-                'html5' => false,
-                'format' => 'dd-MM-yyyy HH:mm',
-                //'empty_data' => new \DateTime('now'),
-                //'attr' => ['class' => 'js-datepicker'],
-                // 'attr' => [
-                //     'placeholder' =>  new \DateTime('now'),],
-            ])
+            // ->add('date_parution', DateTimeType::class, [
+            //     'widget' => 'single_text',
+            //     'html5' => false,
+            //     'format' => 'dd-MM-yyyy HH:mm',
+            //     'required' => false,
+            //     //'empty_data' => new \DateTime('now'),
+            //     //'attr' => ['class' => 'js-datepicker'],
+            //     // 'attr' => [
+            //     //     'placeholder' =>  new \DateTime('now'),],
+            // ])
             // ,DateType::class, [
             //     'widget' => 'single_text',
                 // 'html5' => false,

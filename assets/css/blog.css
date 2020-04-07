@@ -124,3 +124,7 @@ h5{
 .findepage{
   height: 100px;
 }
+.img_fiche{
+  position: relative;
+  width: 100%;
+}

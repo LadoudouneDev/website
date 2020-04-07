@@ -28,7 +28,7 @@ class ArticleRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('a')
             ->andWhere('a.publie = :val')
             ->setParameter('val', $value)
-            ->orderBy('a.id', 'DESC')
+            ->orderBy('a.date_parution', 'DESC')
             ->getQuery()
             ->getResult()
             // ->setMaxResults(100)
@@ -47,4 +47,15 @@ class ArticleRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findByDate()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.date_parution', 'DESC')
+            ->getQuery()
+            ->getResult()
+            // ->setMaxResults(100)
+        ;
+    }
+    
 }
