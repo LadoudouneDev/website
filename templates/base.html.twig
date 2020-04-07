@@ -20,6 +20,7 @@
 
     <body>
 
+
         {% block nav %}
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar">
@@ -37,16 +38,16 @@
                             <a id="nav-link" class="nav-link" href="{{ path('default') }}"><h6>Accueil</h6> <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a id="nav-link" class="nav-link" href="#"><h6>Vos besoins</h6></a>
+                            <a id="nav-link" class="nav-link" href="{{ path('besoins') }}"><h6>Vos besoins</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a id="nav-link" class="nav-link" href="#"><h6>Nos services</h6></a>
+                            <a id="nav-link" class="nav-link" href="{{ path('services') }}"><h6>Nos services</h6></a>
                         </li>
                         <li class="nav-item">
                             <a id="nav-link" class="nav-link" href="{{ path('blog') }}"><h6>Le saviez-vous ?</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a id="nav-link" class="nav-link" href="#"><h6>Nous connaître</h6></a>
+                            <a id="nav-link" class="nav-link" href="{{ path('nous') }}"><h6>Nous connaître</h6></a>
                         </li>
                         <li class="nav-item">
                             <a id="nav-link" class="nav-link" href="{{ path('contact') }}"><h6>Contactez-nous</h6></a>
@@ -67,24 +68,23 @@
 
         {% endblock body %}
 
-        {% block footer %}
-
-            <footer class="page-footer font-small pt-4">
-
-                <div id="footer" class="footer-copyright text-center py-3 fixed-bottom">© 2020 Copyright: LADOUDOUNE Agence Web
-                    {# <a href="https://ladoudoune.com/"> ladoudoune.com</a> #}
-                </div>
-
-            </footer>
-
-        {% endblock footer %}
-
-
-        {% block javascripts %}
+            {% block footer %}
+        
+                <footer class="page-footer font-small pt-4">
+        
+                    <div id="footer" class="footer-copyright text-center py-3 fixed-bottom">© 2020 Copyright: LADOUDOUNE Agence Web
+                        {# <a href="https://ladoudoune.com/"> ladoudoune.com</a> #}
+                    </div>
+        
+                </footer>
+        
+            {% endblock footer %}
             
-            {{ encore_entry_script_tags ( 'app' ) }}
+            {% block javascripts %}
+            
+                {{ encore_entry_script_tags ( 'app' ) }}
 
-        {% endblock %}
+            {% endblock %}
 
     </body>
 </html>

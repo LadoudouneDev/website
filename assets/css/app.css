@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+ /* Permet de supprimmer les bordures d'un bouton ou d'un lien texte aprés les clic : */
+*:focus {
+    outline: none;
+}
+
 body, html {
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -46,6 +51,8 @@ body, html {
 #footer {
     background-color: rgb(24, 22, 22);
     color: rgb(180, 178, 178);
+    /* position: fixed; */
+    /* padding-top: 10%; */
 }
 
 #logotitre {
