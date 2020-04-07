@@ -90,7 +90,7 @@ wordArray.push(letters);
 }
 
 changeWord();
-setInterval(changeWord, 3000);
+setInterval(changeWord, 2500);
 
 
 /////////////////////////////////////////////////////////////////////////////

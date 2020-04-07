@@ -103,36 +103,43 @@ header nav a:hover {
 
 
   /* ////// TRANSITION DU TEXTE DE LA PAGE D'ACCUEIL ///////////////////////////////////////// */
+.col {
+  border: solid 1px black;
+}
 
 #texteTransition {
   text-align: center;
-  margin-top: 40vh;
+  margin-top: 45vh;
+
 }
 .text {
-  position: absolute;
+  display: inline-block;
+  position: relative;
   font-family: 'Ranchers';
-  font-size: 5vh;
-  width: 100%;
-  left: 30%;
+  font-size: 6vh;
+  width: auto;
   text-align: center;
-  /* margin-left: -225px; */
-  /* height: 80px; */
-  top: 30%;
-  /* margin-top: -20px; */
+  top: 25%;
+  border: solid 1px rgb(55, 75, 255);
 }
 
 p {
   display: inline-block;
   vertical-align: top;
   margin: 0;
+  border: solid 1px rgb(236, 4, 4);
+  /* text-align: center; */
+
 }
 
 .word {
   position: absolute;
-  width: 400px;
+  width: 500px;
+  /* margin: auto; */
   opacity: 0;
-  /* text-align: center; */
-  /* right: 20%; */
+  text-align: center;
+  right: 15%;
+  border: solid 2px rgb(15, 217, 231);
 }
 
 .letter {
@@ -181,12 +188,9 @@ p {
 
 
 
-    /* ///////////////////////////////////////////////////////////////////////////////// */
-
-
-
-
-  /* ///////////////////////////////////////////////////////////////////////////////// */
+  /* /////////////////////////////////////////////////////////////////////////////////
+// SLIDE PHOTOS
+  ///////////////////////////////////////////////////////////////////////////////// */
 
   #slideshow {
     position: relative;
@@ -200,6 +204,7 @@ p {
     background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
     border-radius: 2px 2px 2px 2px;
     box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+    /* z-index: 100; */
   }
   
   
@@ -209,7 +214,7 @@ p {
     bottom:16px;
     z-index: -10;
     width: 50%;
-    height: 20px;
+    height: 30px;
     content: " ";
     background: rgba(0,0,0,0.1);
     border-radius: 50%;
@@ -230,7 +235,8 @@ p {
 	position:relative;
 	width: 640px;
 	height: 300px;
-	overflow: hidden;
+  overflow: hidden;
+  z-index: 1000;
 }
 	
 /* on prévoit un petit espace gris pour la timeline */
@@ -242,10 +248,10 @@ p {
 	height: 1px;
 	background: #999;
 } */
-/* 
-   le conteneur des slides
-   en largeur il fait 100% x le nombre de slides
-*/
+
+
+  /* le conteneur des slides en largeur : il fait 100% X le nombre de slides */
+
 #slideshow .slider {
 	position: absolute;
 	left:0; top:0;
@@ -306,7 +312,7 @@ p {
 }
 
 
-#timeline {
+/* #timeline {
 	position: absolute;
 	background: #999;
 	bottom: 15px;
@@ -315,23 +321,21 @@ p {
 	background: rgb(214,98,13);
 	background: rgba(214,98,13,.8);
 	width: 0;
-	/* fonction d'animation */
 	animation: 2s infinite;
-}
+} */
 
 
-@keyframes timeliner {
+/* @keyframes timeliner {
 	0%, 25%, 50%, 75%, 100%	{ width: 0;		}
 	20%, 45%, 70%, 90%		{ width: 640px;	}
-}
+} */
 
-@keyframes figcaptionner {
+/* @keyframes figcaptionner {
 	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
 	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
-}
+} */
 
-/* ajouter à l'élément : */
+/* ajouter à l'élément : la propriété animation */
 #slideshow figcaption {
-	/* ... la propriété animation */
 	animation: figcaptionner 32s infinite;
 }
